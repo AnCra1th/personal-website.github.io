@@ -8,22 +8,33 @@
     <!-- CSP Estrito: Permite apenas assets locais. 'unsafe-inline' é usado aqui apenas para permitir o CSS/JS no mesmo arquivo, na versão final externa, você deve removê-lo. -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:;">
     
-    <title>Meu Blog | Início</title>
+    <title>Cebraztech | Início</title>
 
 
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- Favicon Local (Raiz) -->
+    <link rel="icon" type="image/x-icon" href="./assets//favicon/favicon.ico">
+
+
+    <!-- Link para o CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Link para o JavaScript com o atributo defer -->
+  <script src="./js/main.js" defer></script>
 
 
 </head>
 <body>
 
+
+    
+
     <header>
-        <a href="./index.html" class="logo">meu<span>_</span>blog</a>
+        <a href="./index.html" class="logo">Cebraztech</a>
         <button class="mobile-menu-btn" id="menu-toggle">[ Menu ]</button>
         <nav id="main-nav">
-            <a href="./index.html" class="active">~/Início</a>
-            <a href="#">~/Tecnologia</a>
-            <a href="#">~/Outros</a>
+            <a href="./index.html" class="active">Início</a>
+            <a href="./tecnologia.html">Tecnologia</a>
+            <a href="./outros.html">Outros</a>
         </nav>
     </header>
 
@@ -41,26 +52,21 @@
                 
                 <li class="article-item">
                     <div class="article-meta">15 Set 2026 | Tecnologia, OPSEC</div>
-                    <h3 class="article-title"><a href="./arquitetura-zero-trust.html">O que é Zero Trust?</a></h3>
-                    <p>Uma análise profunda sobre isolamento de ambientes virtuais e boas práticas para evitar vazamentos de dados durante a escrita de código.</p>
+                    <h3 class="article-title"><a href="./artigos/arquitetura-zero-trust.html">O que é Zero Trust?</a></h3>
+                    <p>Uma análise sobre essa arquitetura de cibersegurança.</p>
                 </li>
 
-               /* <li class="article-item">
-                    <div class="article-meta">02 Set 2026 | Criptografia</div>
-                    <h3 class="article-title"><a href="#">Entendendo Criptografia de Curva Elíptica (ECC)</a></h3>
-                    <p>Por que o ECC requer chaves menores em comparação ao RSA e como implementá-lo corretamente em sistemas legados.</p>
-                </li>  */
-
+               
             </ul>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Meu Blog. Totalmente livre de trackers.</p>
-        <p>Acesse via Tor: <code>v2...onion</code></p>
+        <p>Linkedin: <code>www.linkedin.com/in/cebraztech</code></p>
     </footer>
 
-    <script src="./js/main.js" defer></script>
+
 
 </body>
 </html>

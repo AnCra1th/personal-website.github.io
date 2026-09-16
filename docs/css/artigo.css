@@ -1,0 +1,227 @@
+/* Mesmas variaveis do index.html */
+:root {
+--bg-color: #121212;
+--surface-color: #1e1e1e;
+--text-primary: #e0e0e0;
+--text-secondary: #9e9e9e;
+--accent-color: #4CAF50;
+--border-color: #333333;
+--font-mono: 'Consolas', 'Courier New', 'Courier', monospace;
+}
+
+/* Reset Global e Seletor Universal Corrigido */
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* Foco acessivel para navegacao por teclado (OPSEC/Acessibilidade) */
+*:focus-visible {
+outline: 2px dashed var(--accent-color);
+outline-offset: 4px;
+}
+
+body {
+background-color: var(--bg-color);
+color: var(--text-primary);
+font-family: var(--font-mono);
+line-height: 1.6;
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+-webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+HEADER E NAVEGACAO
+========================================= */
+header {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid var(--border-color);
+padding-bottom: 20px;
+margin-bottom: 40px;
+margin-top: 20px;
+}
+
+.logo {
+font-size: 1.5rem;
+font-weight: bold;
+color: var(--text-primary);
+text-decoration: none;
+}
+
+.logo span {
+color: var(--accent-color);
+}
+
+nav {
+display: flex;
+gap: 20px;
+}
+
+nav a {
+color: var(--text-secondary);
+text-decoration: none;
+transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+color: var(--accent-color);
+}
+
+.mobile-menu-btn {
+display: none;
+background: none;
+border: 1px solid var(--border-color);
+color: var(--text-primary);
+padding: 5px 10px;
+cursor: pointer;
+font-family: var(--font-mono);
+}
+
+/* =========================================
+ESTILOS DO ARTIGO
+========================================= */
+article {
+background-color: var(--surface-color);
+padding: 30px;
+border-radius: 4px;
+border: 1px solid var(--border-color);
+}
+
+.article-header {
+border-bottom: 1px dashed var(--border-color);
+padding-bottom: 20px;
+margin-bottom: 30px;
+}
+
+.article-header h1 {
+color: var(--accent-color);
+margin-bottom: 10px;
+line-height: 1.2;
+}
+
+.article-meta {
+color: var(--text-secondary);
+font-size: 0.9rem;
+}
+
+.article-content h2 {
+margin-top: 40px;
+margin-bottom: 15px;
+color: var(--text-primary);
+border-left: 4px solid var(--accent-color);
+padding-left: 10px;
+}
+
+.article-content p {
+margin-bottom: 20px;
+color: var(--text-primary);
+/* Alinhamento a esquerda previne rios em branco e facilita leitura */
+text-align: left;
+}
+
+/* Imagens responsivas dentro dos artigos */
+.article-content img {
+max-width: 100%;
+height: auto;
+border-radius: 4px;
+margin: 20px 0;
+border: 1px solid var(--border-color);
+}
+
+.article-content a {
+color: var(--accent-color);
+text-decoration: none;
+border-bottom: 1px dashed var(--accent-color);
+}
+
+.article-content a:hover {
+background-color: var(--accent-color);
+color: var(--bg-color);
+}
+
+/* =========================================
+BLOCOS DE CODIGO E CITACOES
+========================================= */
+.article-content pre {
+background-color: var(--bg-color);
+border: 1px solid var(--border-color);
+padding: 15px;
+overflow-x: auto;
+margin-bottom: 20px;
+border-radius: 4px;
+}
+
+.article-content code {
+font-family: var(--font-mono);
+color: #ffb86c;
+}
+
+.article-content p code {
+background-color: var(--bg-color);
+padding: 2px 5px;
+border-radius: 3px;
+border: 1px solid var(--border-color);
+}
+
+.article-content blockquote {
+border-left: 4px solid var(--text-secondary);
+padding-left: 15px;
+margin: 20px 0;
+color: var(--text-secondary);
+font-style: italic;
+}
+
+.back-link {
+display: inline-block;
+margin-top: 30px;
+color: var(--text-secondary);
+text-decoration: none;
+}
+
+.back-link:hover {
+color: var(--accent-color);
+}
+
+/* =========================================
+FOOTER E RESPONSIVIDADE
+========================================= */
+footer {
+border-top: 1px solid var(--border-color);
+padding-top: 20px;
+margin-top: 40px;
+text-align: center;
+font-size: 0.9rem;
+color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+header {
+flex-direction: column;
+align-items: flex-start;
+gap: 15px;
+}
+.mobile-menu-btn {
+display: block;
+align-self: flex-end;
+margin-top: -40px;
+}
+nav {
+display: none;
+flex-direction: column;
+width: 100%;
+gap: 10px;
+}
+nav.open {
+display: flex;
+}
+article {
+padding: 15px;
+}
+}
