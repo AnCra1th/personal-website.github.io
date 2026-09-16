@@ -261,3 +261,61 @@ footer {
         padding: 15px;
     }
 }
+ /* =========================================
+   ESTILOS DA IMAGEM DE PERFIL (/sobre.html)
+   ========================================= */
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Alinha a imagem verticalmente no centro do texto */
+    gap: 30px;              /* Espaçamento entre a imagem e o texto */
+    margin-top: 20px;
+}
+
+.profile-img {
+    /* 1. DIMENSÕES E RESPONSIVIDADE NO DESKTOP */
+    width: 100%;
+    max-width: 220px;       /* <-- AJUSTE AQUI: Tamanho da foto no Desktop */
+    aspect-ratio: 1 / 1;    /* Garante proporção 1:1 perfeita (Quadrada/Circular) */
+    object-fit: cover;      /* Impede que a foto fique esticada/deformada */
+    flex-shrink: 0;         /* Impede que o flexbox esmague a imagem */
+
+    /* 2. BORDAS ARREDONDADAS (OPÇÕES DE ESTILO) */
+    border-radius: 50%;    /* <-- AQUI: 16px para cantos suavemente arredondados */
+                            /* Troque para 50% se quiser 100% REDONDA (Círculo) */
+                            /* Troque para 4px se quiser o visual RETRO/TERMINAL */
+
+    /* 3. BORDA E SOMBRA HACKER/TERMINAL */
+    border: 2px solid var(--accent-color);          /* Borda verde do tema */
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.15);  /* Brilho verde sutil */
+    
+    /* 4. TRANSIÇÃO (Para animações suaves) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse no Desktop */
+.profile-img:hover {
+    transform: scale(1.04);                        /* Leve aumento de tamanho */
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.35); /* Brilho verde mais intenso */
+}
+
+/* 5. RESPONSIVIDADE PARA CELULARES (Telas até 600px) */
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column; /* Empilha a foto acima do texto no celular */
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-img {
+        max-width: 130px;       /* <-- AJUSTE AQUI: Tamanho da foto em telas pequenas */
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
