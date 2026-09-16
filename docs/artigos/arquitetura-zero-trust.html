@@ -6,12 +6,20 @@
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:;">
     
-    <title>Como configurar um ambiente de desenvolvimento seguro | Meu Blog</title>
+    <title>Zero Trust</title>
 
-    <!-- Favicon Local (Retornando um diretório) -->
+
+
+    <!-- PREENCHER SEMPRE QUE FIZER UM NOVO ARTIGO--> 
+
+    <meta name="description" content="Explicação sobre o paradigma Zero Trust, no âmbito da cibersegurança.">
+    <meta name="author" content="Carlos Eduardo">    
+    <link rel="canonical" href="https://cebraztech.com.br/artigos/NOME_DO_ARQUIVO.html">
+
+    <!--Favicon Local-->
     <link rel="icon" type="image/png" href="../assets/favicon.png">
 
-    <!-- Link para o CSS padrão de artigos -->
+    <!-- Link para o CSS padrao de artigos -->
     <link rel="stylesheet" href="../css/artigo.css">
     
     <!-- Link para o JavaScript Principal -->
@@ -20,7 +28,7 @@
 <body>
 
     <header>
-        <!-- AQUI ESTÁ A CORREÇÃO: "../" faz o navegador sair da pasta "artigos" e achar o index na raiz -->
+        <!-- LINK PARA AS PAGINAS PRINCIPAIS DO SITE -->
         <a href="../index.html" class="logo">Cebraztech</a>
         <button class="mobile-menu-btn" id="menu-toggle">[ Menu ]</button>
         <nav id="main-nav">
@@ -33,19 +41,21 @@
     <main>
         <article>
             <header class="article-header">
-                <h1>Como configurar um ambiente de desenvolvimento seguro</h1>
+                <h1>Zero Trust</h1>
                 <div class="article-meta">Escrito em 14 de Setembro de 2026 | Categoria: Tecnologia</div>
             </header>
 
             <div class="article-content">
                 <p>Neste artigo, vamos explorar como você pode garantir que seu ambiente de desenvolvimento esteja isolado, prevenindo vazamentos acidentais de dados e infecções por dependências maliciosas (supply chain attacks).</p>
 
-                <h2>1. Isolamento com Máquinas Virtuais</h2>
-                <p>A primeira regra para OPSEC (Operações de Segurança) é nunca misturar seu ambiente de trabalho principal com seus experimentos. Ferramentas como <code>Qubes OS</code> ou até mesmo <code>VirtualBox</code> bem configurado são essenciais.</p>
+                <h2>1. A arquitetura Zero Trust</h2>
+                <p>Zero Trust é uma arquitetura de cibersegurança que parte do princício de nada é intrinsicamente confiável. <br> Adota-se a política de <code>Do not trust, verify</code>.
+                </p>
 
-                <blockquote>
+               <!-- <blockquote>
                     "A segurança não é um produto, mas um processo contínuo." - Bruce Schneier
                 </blockquote>
+                
 
                 <h2>2. Configuração de Rede Restrita</h2>
                 <p>Certifique-se de que sua VM só pode se comunicar através da rede Tor. Uma regra de firewall local (iptables) pode evitar vazamentos (clearnet leaks):</p>
@@ -58,15 +68,15 @@ iptables -A OUTPUT -j DROP
 
                 <h2>Conclusão</h2>
                 <p>Manter a segurança do seu ambiente exige disciplina. Evite baixar binários não assinados e verifique sempre os hashes das suas ferramentas.</p>
-            </div>
-        </article>
+            --> </div>
+        </article> 
         
-        <!-- CORREÇÃO DO BOTÃO VOLTAR -->
+        <!-- BOTAO VOLTAR, NO FIM DE CADA ARTIGO -->
         <a href="../index.html" class="back-link">← cd ../ (Voltar para Início)</a>
     </main>
 
     <footer>
-        <p>&copy; 2026 Meu Blog. Totalmente livre de trackers.</p>
+        <p>&copy;2026</p>
     </footer>
 
 </body>
