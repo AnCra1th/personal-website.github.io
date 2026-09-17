@@ -316,6 +316,38 @@ footer {
 
 
 
+/* =========================================
+   MODO CLARO (LIGHT THEME)
+   ========================================= */
+/* Quando o JS adicionar esta classe ao <body>, as cores mudam globalmente */
+body.light-theme {
+    --bg-color: #f4f4f5;         /* Fundo cinza bem claro */
+    --surface-color: #ffffff;    /* Fundo dos cartões em branco puro */
+    --text-primary: #18181b;     /* Texto quase preto (contraste ideal) */
+    --text-secondary: #52525b;   /* Texto secundário cinza */
+    --accent-color: #059669;     /* Verde mais escuro para garantir leitura no fundo branco */
+    --border-color: #e4e4e7;     /* Bordas sutis */
+}
 
+/* Transição suave ao trocar as cores (evita flash no olho) */
+body, article, .article-item {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Estilo do Botão no Menu */
+.theme-btn {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.theme-btn:hover {
+    color: var(--accent-color);
+}
 
 
