@@ -6,15 +6,15 @@
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:;">
     
-    <title>Zero Trust</title>
+    <title>Cyber Kill Chain</title>
 
 
 
     <!-- PREENCHER SEMPRE QUE FIZER UM NOVO ARTIGO--> 
 
-    <meta name="description" content="Explicação sobre o paradigma Zero Trust, no âmbito da cibersegurança.">
+    <meta name="description" content="Explicação sobre os framworks de cibersegurança Cyber Kill Chain e Mitre Att&ck.">
     <meta name="author" content="Carlos Eduardo">    
-    <link rel="canonical" href="https://cebraztech.com.br/artigos/arquitetura-zero-trust.html">
+    <link rel="canonical" href="https://cebraztech.com.br/artigos/cyber-kill-chain.html">
 
     <!-- Favicon Local-->
     <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
@@ -48,36 +48,84 @@
     <main>
         <article>
             <header class="article-header">
-                <h1>Arquitetura Zero Trust</h1> 
+                <h1>Cyber Kill Chain</h1> 
                 
                 <div class="article-meta"> 
-                    Escrito em 14 de Setembro de 2026 | Categoria: Tecnologia</div>
+                    Escrito em 11 de Outubro de 2026 | Categoria: cibersegurança</div>
             </header>
 
             <div class="article-content">
-                <p>Neste artigo, trata-se brevemente e de maneira não exaustiva, sobre a arquitetura de cibersegurança Zero Trust. Ao final, encontram-se as fontes utilizadas para compor este artigo.</p>
+                <p>Neste artigo, trata-se brevemente e de maneira não exaustiva, sobre o framework Cyber Kill Chain. Ao final, encontram-se as fontes utilizadas para compor este artigo.</p>
 
-                <h2>1. A arquitetura Zero Trust</h2>
-                <p>Zero Trust é uma arquitetura de cibersegurança que parte do princício de que nenhum ativo é intrinsicamente confiável. <br> Adota-se a política de <code>Do not trust, verify</code>.
-                </p>
-
-               <!-- <blockquote>
-                    "A segurança não é um produto, mas um processo contínuo." - Bruce Schneier
-                </blockquote>
+                <h2>1. O que é a Cyber Kill Chain?</h2>
+                <p>Inspirada pelo militarismo, a Cyber Kill Chain é um framework de cibersegurança que destaca as etapas que um adversário realiza em um ataque cibernético. <br>
+                Desenvolvido por Lockheed Martin, este framework objetiva entender as etapas de um ataque cibernético, para que seja possível interrompê-lo o mais brevemente possível.</p>
                 
 
-                <h2>2. Configuração de Rede Restrita</h2>
-                <p>Certifique-se de que sua VM só pode se comunicar através da rede Tor. Uma regra de firewall local (iptables) pode evitar vazamentos (clearnet leaks):</p>
+                <!-- <blockquote>
+                    "A segurança não é um produto, mas um processo contínuo." - Bruce Schneier
+                </blockquote> -->
+                
 
-<pre><code># Bloquear todo tráfego que não seja Tor (UID do usuário Tor)
-iptables -A OUTPUT -m owner --uid-owner debian-tor -j ACCEPT
-iptables -A OUTPUT -p udp --dport 53 -j REJECT
-iptables -A OUTPUT -j DROP
+                <h2>2. Etapas da Cyber Kill Chain</h2>
+                <p>A Cyber Kill Chain possui 07 etapas fundamentais, que descrevem o ciclo de vida de um ataque cibernético:</p>
+
+<pre><code># Etapas
+
+1° - Reconhecimento:
+Descoberta de informações sobre o alvo, como endereços de e-mail,
+blocos de IP, domínios e sub-domínios etc. Consiste essencialmente em
+realizar o footprint e fingerprint do alvo.
+
+2° - Desenvolvimento de recursos:
+É a adoção e Desenvolvido de ferramentas ou exploits que serão 
+usados para atacar o alvo.
+
+3° - Entrega:
+Entrega do exploit para a vítima. Pode ser realizado via 
+e-mail, mídia USB, redes sociais, etc.
+
+4° - Exploração:
+Após a entrega do exploit, explora-se vulnerabilidades
+no ambiente do alvo, objetivando comprometer seus ativos.
+
+5° Instalação:
+Nesta etapa, objetiva-se instalar malware nos ativos do alvo,
+comprometendo-os. 
+
+6° Comando e Controle (C2):
+Mecanismos de persistência e controle são estabelecidos
+nos ativos comprometidos. Nesta etapa, o atacante possui
+controle dos ativos comprometidos.
+
+7° Ações e Objetivos:
+Após comprometer os ativos, o atacante pode realizar 
+seus objetivos finais, como a destruição, exfiltração ou
+manipulação indevida dos dados. 
+
 </code></pre>
 
                 <h2>Conclusão</h2>
-                <p>Manter a segurança do seu ambiente exige disciplina. Evite baixar binários não assinados e verifique sempre os hashes das suas ferramentas.</p>
-            --> </div>
+                <p>A Cyber Kill Chain é um framework importante para a defesa cibernética eficiente. <br>
+                   Compreendê-la pode fornecer insights valiosos sobre o comportamento de ameaças e os momentos de quebrar a cadeia de ataque.
+                </p>
+
+
+                <h2>Fontes</h2>
+                
+                <li>
+     <a href="https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html" target="_blank" rel="noopener noreferrer">
+      Cyber Kill Chain
+    </a>
+  </li>
+  <li>
+    <a href="https://youtu.be/4Vz_uP0I-x4?si=F57QWUYWx970CtF0" target="_blank" rel="noopener noreferrer">
+      Defending Against Cyber Attacks: A Lockheed Martin Overview
+    </a>
+  </li>
+
+             </div>
+             </div>
         </article> 
         
         <!-- BOTAO VOLTAR, NO FIM DE CADA ARTIGO -->
